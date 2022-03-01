@@ -26,6 +26,9 @@
     <layout class="QGridLayout" name="gridLayout">
      <item row="5" column="3">
       <widget class="QLineEdit" name="x1y2">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
        <property name="font">
         <font>
          <pointsize>20</pointsize>
@@ -41,13 +44,25 @@
      </item>
      <item row="3" column="2">
       <widget class="QLineEdit" name="x0y0">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
        <property name="font">
         <font>
          <pointsize>20</pointsize>
         </font>
        </property>
+       <property name="layoutDirection">
+        <enum>Qt::RightToLeft</enum>
+       </property>
        <property name="text">
         <string/>
+       </property>
+       <property name="maxLength">
+        <number>1</number>
+       </property>
+       <property name="cursorPosition">
+        <number>0</number>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -56,6 +71,9 @@
      </item>
      <item row="4" column="2">
       <widget class="QLineEdit" name="x0y1">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
        <property name="font">
         <font>
          <pointsize>20</pointsize>
@@ -71,6 +89,9 @@
      </item>
      <item row="5" column="2">
       <widget class="QLineEdit" name="x0y2">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
        <property name="font">
         <font>
          <pointsize>20</pointsize>
@@ -86,6 +107,9 @@
      </item>
      <item row="3" column="3">
       <widget class="QLineEdit" name="x1y0">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
        <property name="font">
         <font>
          <pointsize>20</pointsize>
@@ -101,6 +125,9 @@
      </item>
      <item row="4" column="3">
       <widget class="QLineEdit" name="x1y1">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
        <property name="font">
         <font>
          <pointsize>20</pointsize>
@@ -116,6 +143,9 @@
      </item>
      <item row="3" column="4">
       <widget class="QLineEdit" name="x2y0">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
        <property name="font">
         <font>
          <pointsize>20</pointsize>
@@ -131,6 +161,9 @@
      </item>
      <item row="4" column="4">
       <widget class="QLineEdit" name="x2y1">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
        <property name="font">
         <font>
          <pointsize>20</pointsize>
@@ -146,6 +179,9 @@
      </item>
      <item row="5" column="4">
       <widget class="QLineEdit" name="x2y2">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
        <property name="font">
         <font>
          <pointsize>20</pointsize>
@@ -160,6 +196,24 @@
       </widget>
      </item>
     </layout>
+   </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>680</x>
+      <y>10</y>
+      <width>91</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Start</string>
+    </property>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
