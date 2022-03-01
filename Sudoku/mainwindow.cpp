@@ -9,6 +9,7 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    ui->x0y0->setInputMask("d");
 }
 
 MainWindow::~MainWindow()
@@ -18,46 +19,42 @@ MainWindow::~MainWindow()
 
 void MainWindow::Start(int i){
 
-    ui->x0y0->setEnabled(i);
+    ui->x0y0->setEnabled(1);
     ui->x0y0->setInputMask("d");
 
-    ui->x0y1->setEnabled(i);
+    ui->x0y1->setEnabled(1);
     ui->x0y1->setInputMask("d");
 
-    ui->x0y2->setEnabled(i);
+    ui->x0y2->setEnabled(1);
     ui->x0y2->setInputMask("d");
 
-    ui->x1y0->setEnabled(i);
+    ui->x1y0->setEnabled(1);
     ui->x1y0->setInputMask("d");
 
-    ui->x2y0->setEnabled(i);
+    ui->x2y0->setEnabled(1);
     ui->x2y0->setInputMask("d");
 
-    ui->x1y1->setEnabled(i);
+    ui->x1y1->setEnabled(1);
     ui->x1y1->setInputMask("d");
 
-    ui->x1y2->setEnabled(i);
+    ui->x1y2->setEnabled(1);
     ui->x1y2->setInputMask("d");
 
-    ui->x2y1->setEnabled(i);
+    ui->x2y1->setEnabled(1);
     ui->x2y1->setInputMask("d");
 
-    ui->x2y2->setEnabled(i);
+    ui->x2y2->setEnabled(1);
     ui->x2y2->setInputMask("d");
+
 }
 
 void MainWindow::on_pushButton_clicked()
 {
-    int i = 0;
-    if(ui->x0y0->isEnabled() == true){
-        i = 0;
-        ui->pushButton->setText("Reset");
-    }
-    Start(i);
+    Start();
 }
 
-void MainWindow::on_pushButton_2_clicked()
-{
 
-}
+
+
+
 
