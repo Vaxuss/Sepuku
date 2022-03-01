@@ -1,0 +1,4 @@
+﻿  suoku-generowanie mapy.cpp
+F:\GithubPM\Sepuku\suoku-generowanie mapy\suoku-generowanie mapy\suoku-generowanie mapy.cpp(8,15): warning C4244: "argument": konwersja z "time_t" do "unsigned int", możliwa utrata danych
+F:\GithubPM\Sepuku\suoku-generowanie mapy\suoku-generowanie mapy\suoku-generowanie mapy.cpp(9,9): warning C4101: "plansza": lokalna zmienna, do której nie istnieje odwołanie
+  suoku-generowanie mapy.vcxproj -> F:\GithubPM\Sepuku\suoku-generowanie mapy\Debug\suoku-generowanie mapy.exe
