@@ -10,7 +10,6 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    ui->x0y0->setInputMask("d");
 }
 
 MainWindow::~MainWindow()
@@ -68,10 +67,10 @@ void MainWindow::on_pushButton_2_clicked()
     int x2y1 = ui->x2y1->text().toInt();
     int x2y2 = ui->x2y2->text().toInt();
 
+
     plansza[9] = (x0y0, x0y1, x0y2, x1y0, x2y0, x1y1, x1y2, x2y1, x2y2);
 
     bool bad = false;
-
 
 
     if(bad == true){
