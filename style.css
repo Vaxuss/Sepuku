@@ -1,0 +1,33 @@
+body{
+    display: flex;
+}
+.kontener {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo {
+    background-image: url("sudoku.png");
+    background-size: cover;
+    width: 80vh;
+    height: 20vh;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20vh;
+
+}
+
+img {
+    justify-content: center;
+    align-items: center;
+    width: 80vh;
+    height: 20vh;
+}
+
+.przyciski{
+    text-align: center;
+    margin-top: 20vh;
+}
