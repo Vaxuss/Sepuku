@@ -14,12 +14,15 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+    int plansza[9];
 
 private slots:
     void on_pushButton_clicked();
     void Start();
 
 
+
+    void on_pushButton_2_clicked();
 
 private:
     Ui::MainWindow *ui;
