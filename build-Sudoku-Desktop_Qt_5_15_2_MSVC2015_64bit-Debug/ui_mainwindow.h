@@ -37,6 +37,7 @@ public:
     QLineEdit *x2y1;
     QLineEdit *x2y2;
     QPushButton *pushButton;
+    QPushButton *pushButton_2;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -134,6 +135,10 @@ public:
         pushButton->setObjectName(QString::fromUtf8("pushButton"));
         pushButton->setGeometry(QRect(680, 10, 91, 41));
         pushButton->setFont(font);
+        pushButton_2 = new QPushButton(centralwidget);
+        pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
+        pushButton_2->setGeometry(QRect(50, 340, 151, 41));
+        pushButton_2->setFont(font);
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
@@ -161,6 +166,7 @@ public:
         x2y1->setText(QString());
         x2y2->setText(QString());
         pushButton->setText(QCoreApplication::translate("MainWindow", "Start", nullptr));
+        pushButton_2->setText(QCoreApplication::translate("MainWindow", "Solve", nullptr));
     } // retranslateUi
 
 };
