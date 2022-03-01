@@ -17,7 +17,7 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-void MainWindow::Start(int i){
+void MainWindow::Start(){
 
     ui->x0y0->setEnabled(1);
     ui->x0y0->setInputMask("d");
