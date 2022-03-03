@@ -36,4 +36,26 @@ body{
     
 }
 
+<<<<<<< Updated upstream
 >>>>>>> 591380c6ec9f53a90cadb84640ac2dfd73a7975a
+=======
+.plansza {
+    float: left;
+    display: flex;
+    width: 10vh;
+    height: 10vh;
+    border: 2px solid;
+    background-color: #FFFAC3;
+    text-align: center;
+}
+
+#pole {
+    width: 92.75vh;
+    height: 92.75vh;
+    border: 2px solid;
+}
+
+.liczby {
+    margin: auto;
+}
+>>>>>>> Stashed changes
