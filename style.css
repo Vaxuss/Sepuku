@@ -33,3 +33,52 @@ img {
     margin-top: 20vh;
     
 }
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+  }
+  .one {
+    grid-column: 1;
+    grid-row: 1;
+    border-radius: 20px;
+    border-style: solid;
+    background-color: black;
+  }
+  .two {
+    grid-column: 2;
+    grid-row: 1;
+    border-radius: 20px;
+    border-style: solid;
+    background-color: black;
+  }
+  .three {
+    grid-column: 1;
+    grid-row: 2;
+    border-radius: 20px;
+    border-style: solid;
+    background-color: black;
+  }
+  .four {
+    grid-column: 2;
+    grid-row: 2;
+    border-radius: 20px;
+    border-style: solid;
+    background-color: black;
+  }
+  .five {
+    grid-column: 2;
+    grid-row: 3;
+    border-radius: 20px;
+    border-style: solid;
+    background-color: black;
+  }
+  .six {
+    grid-column: 1;
+    grid-row: 3;
+    border-radius: 20px;
+    border-style: solid;
+    background-color: black;
+  }
