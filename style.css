@@ -25,7 +25,15 @@ body{
 
 
 .przyciski{
+<<<<<<< HEAD
     position: absolute;
     top: 50%;
     left: 50%;
 }
+=======
+    text-align:center;
+    margin-top: 20vh;
+    
+}
+
+>>>>>>> 591380c6ec9f53a90cadb84640ac2dfd73a7975a
