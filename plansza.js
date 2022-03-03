@@ -4,7 +4,7 @@ function tworzeniePlanszy() {
     {
         for(let l = 0; l < 9; l++)
         {
-            document.body.innerHTML += "<div id= " + a + " > " + a + "</div>";
+            document.body.innerHTML += "<div class = "+"plansza"+" id= " + a + " > " + a + "</div>";
             a++;
         }
     }
