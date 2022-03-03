@@ -7,13 +7,14 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    float: left;
 }
 .logo {
     background-image: url("sudoku.png");
     background-size: cover;
     width: 80vh;
     height: 20vh;
-    text-align: center;
+    text-align: center; 
     align-items: center;
     justify-content: center;
     margin-top: 20vh;
@@ -28,6 +29,7 @@ img {
 }
 
 .przyciski{
-    text-align: center;
+    text-align:center;
     margin-top: 20vh;
+    
 }
