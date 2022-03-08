@@ -1,13 +1,14 @@
 function tworzeniePlanszy() {
     let a = 1;
-    let b = 1;
+    let b = 101;
 
     for(let i = 0; i < 9 ; i++)
     {
         for(let l = 0; l < 9; l++)
         {
-            document.getElementById("pole").innerHTML += "<div onclick=" + "zwiekszanieIndexu("+a+")" + " class = "+"plansza"+" id= " + a + " ><a class = " + "liczby" + ">" + a + "</a></div>";                 
+            document.getElementById("pole").innerHTML += "<div onclick=" + "zwiekszanieIndexu("+b+")" + " class = "+"plansza" + " id= " + a + " ><a class = " + "liczby" + " id=" + b + " >" + a + "</a></div>";                 
             a++;
+            b++;
         }
     }  
     for(let j = 1 ; j <= 9; j++){
