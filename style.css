@@ -1,5 +1,6 @@
 body{
     display: flex;
+    cursor: url('dis.jpg'), auto;	
 }
 .kontener {
     width: 100%;
@@ -41,7 +42,8 @@ img {
     height: 10vh;
     background-color: #FFFAC3;
     text-align: center;
-    
+    box-sizing: border-box;
+    cursor: url('dis.jpg'), auto;	
 }
 
 #pole {
@@ -53,4 +55,7 @@ img {
 
 .liczby {
     margin: auto;
+}
+div:hover {
+    background-color: #fff;
 }

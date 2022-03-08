@@ -11,7 +11,7 @@ function tworzeniePlanszy() {
         {
             if(c < 10)
             {
-                document.getElementById("pole").innerHTML += "<div onclick=" + "zwiekszanieIndexu("+b+")" + " class = "+"plansza" + " id= " + a + " ><a class = " + "liczby" + " id=" + b + " >" + c + "</a></div>";                 
+                document.getElementById("pole").innerHTML += "<div onmouseover = "+"zmianaKoloru("+a+")" + " onclick=" + "zwiekszanieIndexu("+b+")" + " class = "+"plansza" + " id= " + a + " ><a class = " + "liczby" + " id=" + b + " >" + c + "</a></div>";                 
                 a++;
                 b++;
                 c++;
@@ -19,7 +19,7 @@ function tworzeniePlanszy() {
             else
             {
                 c = 1;
-                document.getElementById("pole").innerHTML += "<div onclick=" + "zwiekszanieIndexu("+b+")" + " class = "+"plansza" + " id= " + a + " ><a class = " + "liczby" + " id=" + b + " >" + c + "</a></div>";                 
+                document.getElementById("pole").innerHTML += "<div onmouseover = "+"zmianaKoloru("+a+")" + " onclick=" + "zwiekszanieIndexu("+b+")" + " class = "+"plansza" + " id= " + a + " ><a class = " + "liczby" + " id=" + b + " >" + c + "</a></div>";                 
                 a++;
                 b++;
                 c++;
@@ -74,3 +74,7 @@ function zwiekszanieIndexu(index){
 
     console.log("Zwiekszanie indexu");
 }
+
+//function zmianaKoloru(index) {
+    //document.getElementById(index).style.backgroundColor = "rgb(0, 255, 0)";
+//}
