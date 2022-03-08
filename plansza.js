@@ -3,6 +3,8 @@ function tworzeniePlanszy() {
     let b = 101;
     let c = 1;
 
+
+
     for(let i = 0; i < 9 ; i++)
     {
         for(let l = 0; l < 9; l++)
@@ -22,7 +24,6 @@ function tworzeniePlanszy() {
                 b++;
                 c++;
             }
-            
         }
     }  
     for(let j = 1 ; j <= 9; j++){
