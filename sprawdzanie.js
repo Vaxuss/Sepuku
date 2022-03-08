@@ -129,6 +129,7 @@ function sprawdzaniePol(){
         }
     }*/
 
+
     for(let i = 0 ; i < 9; i++)
     {
         k = 3*i;
