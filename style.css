@@ -1,6 +1,7 @@
 body{
     display: flex;
     cursor: url('dis.jpg'), auto;	
+    font-size: 25px;
 }
 .kontener {
     width: 100%;
@@ -59,3 +60,7 @@ img {
 div:hover {
     background-color: #fff;
 }
+
+div:active {
+    background-color: rgba(150, 150, 16, 0.822);
+  }

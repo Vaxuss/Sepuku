@@ -57,7 +57,6 @@ function tworzeniePlanszy() {
     } 
 }
 
-
 function zwiekszanieIndexu(index){
     let pole = document.getElementById(index);
     let wartoscPola = +pole.textContent;
@@ -73,6 +72,7 @@ function zwiekszanieIndexu(index){
     }
 
     console.log("Zwiekszanie indexu");
+    
 }
 
 //function zmianaKoloru(index) {
