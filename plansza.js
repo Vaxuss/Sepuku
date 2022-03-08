@@ -6,8 +6,8 @@ function tworzeniePlanszy() {
     {
         for(let l = 0; l < 9; l++)
         {
-            document.getElementById("pole").innerHTML += "<div class = "+"plansza"+" id= " + a + " ><a class = " + "liczby" + ">" + a + "</a></div>";                        
-            document.getElementById(a).addEventListener("click", tworzenieFormularza(a));
+            document.getElementById("pole").innerHTML += "<div class = "+"plansza"+" id= " + a + " ><a class = " + "liczby" + ">" + a + "</a></div>";
+            document.getElementById(a).addEventListener("click" , zwiekszanieIndexu(a));                        
             a++;
         }      
         
@@ -45,20 +45,19 @@ function tworzeniePlanszy() {
     }    
 }
 
-function tworzenieFormularza(index)
-{
+function zwiekszanieIndexu(index){
     let pole = document.getElementById(index);
-    let formularze = document.getElementById("formularze");
+    let wartoscPola = +pole.textContent;
+    console.log(wartoscPola);
 
-    formularze.innerHTML = "<input type=" + "number" +  "name=" + "liczba" + "id=" +"liczba" + "><br> <button id=" + "wykonaj" + ">Wpisz</button>";
+    if(wartoscPola == 9)
+    {
+        pole.innerHTML = "";
+    }
+    else
+    {
+        pole.innerHTML = wartoscPola+1;
+    }
 
-    document.getElementById("liczba").addEventListener("click", wypelnianiePol(index));
-    console.log("Tworzenie Formularzy");
-}
-
-function wypelnianiePol(index)
-{
-    //let wartosc = +document.getElementById("liczba").value;
-    //let wartoscKomorki = document.getElementById(index).innerHTML = wartosc;
-    console.log("wypelnianiePol");
+    console.log("Zwiekszanie indexu");
 }
