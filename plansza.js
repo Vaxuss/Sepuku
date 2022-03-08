@@ -7,7 +7,6 @@ function tworzeniePlanszy() {
         for(let l = 0; l < 9; l++)
         {
             document.getElementById("pole").innerHTML += "<div class = "+"plansza"+" id= " + a + " ><a class = " + "liczby" + ">" + a + "</a></div>";                        
-            document.getElementById(a).addEventListener("click", tworzenieFormularza(a));
             a++;
         }      
         
@@ -45,20 +44,3 @@ function tworzeniePlanszy() {
     }    
 }
 
-function tworzenieFormularza(index)
-{
-    let pole = document.getElementById(index);
-    let formularze = document.getElementById("formularze");
-
-    formularze.innerHTML = "<input type=" + "number" +  "name=" + "liczba" + "id=" +"liczba" + "><br> <button id=" + "wykonaj" + ">Wpisz</button>";
-
-    document.getElementById("liczba").addEventListener("click", wypelnianiePol(index));
-    console.log("Tworzenie Formularzy");
-}
-
-function wypelnianiePol(index)
-{
-    //let wartosc = +document.getElementById("liczba").value;
-    //let wartoscKomorki = document.getElementById(index).innerHTML = wartosc;
-    console.log("wypelnianiePol");
-}
