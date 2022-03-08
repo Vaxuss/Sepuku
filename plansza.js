@@ -1,13 +1,28 @@
 function tworzeniePlanszy() {
     let a = 1;
-    let b = 1;
+    let b = 101;
+    let c = 1;
 
     for(let i = 0; i < 9 ; i++)
     {
         for(let l = 0; l < 9; l++)
         {
-            document.getElementById("pole").innerHTML += "<div onclick=" + "zwiekszanieIndexu("+a+")" + " class = "+"plansza"+" id= " + a + " ><a class = " + "liczby" + ">" + a + "</a></div>";                 
-            a++;
+            if(c < 10)
+            {
+                document.getElementById("pole").innerHTML += "<div onclick=" + "zwiekszanieIndexu("+b+")" + " class = "+"plansza" + " id= " + a + " ><a class = " + "liczby" + " id=" + b + " >" + c + "</a></div>";                 
+                a++;
+                b++;
+                c++;
+            }
+            else
+            {
+                c = 1;
+                document.getElementById("pole").innerHTML += "<div onclick=" + "zwiekszanieIndexu("+b+")" + " class = "+"plansza" + " id= " + a + " ><a class = " + "liczby" + " id=" + b + " >" + c + "</a></div>";                 
+                a++;
+                b++;
+                c++;
+            }
+            
         }
     }  
     for(let j = 1 ; j <= 9; j++){
@@ -40,12 +55,14 @@ function tworzeniePlanszy() {
         }
     } 
 }
+
+
 function zwiekszanieIndexu(index){
     let pole = document.getElementById(index);
     let wartoscPola = +pole.textContent;
     console.log(wartoscPola);
 
-    if(wartoscPola == 9)
+    if(wartoscPola >= 9)
     {
         pole.innerHTML = "";
     }
