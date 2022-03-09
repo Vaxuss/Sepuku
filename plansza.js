@@ -75,6 +75,20 @@ function zwiekszanieIndexu(index){
     
 }
 
-//function zmianaKoloru(index) {
-    //document.getElementById(index).style.backgroundColor = "rgb(0, 255, 0)";
-//}
+function start(){
+    let diff;
+    let pole;
+    const evt = new MouseEvent("click");
+
+    for(let i = 1; i < 82;i++){
+        pole = document.getElementById(i);
+        let wartoscPola = +pole.textContent;
+        for(let j = wartoscPola; j < 10; j++){
+            document.getElementById(i).dispatchEvent(evt);   
+        }              
+    }
+}
+
+function zmianaKoloru(index) {
+    // document.getElementById(index).style.backgroundColor = "rgb(0, 255, 0)";
+}
