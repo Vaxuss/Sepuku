@@ -75,6 +75,7 @@ function zwiekszanieIndexu(index){
     
 }
 
+//czyszczenie planszy/start gry
 function start(){
     let diff;
     let pole;
