@@ -57,7 +57,6 @@ function tworzeniePlanszy() {
     } 
 }
 
-
 function zwiekszanieIndexu(index){
     let pole = document.getElementById(index);
     let wartoscPola = +pole.textContent;
@@ -73,8 +72,24 @@ function zwiekszanieIndexu(index){
     }
 
     console.log("Zwiekszanie indexu");
+    
 }
 
-//function zmianaKoloru(index) {
-    //document.getElementById(index).style.backgroundColor = "rgb(0, 255, 0)";
-//}
+//czyszczenie planszy/start gry
+function start(){
+    let diff;
+    let pole;
+    const evt = new MouseEvent("click");
+
+    for(let i = 1; i < 82;i++){
+        pole = document.getElementById(i);
+        let wartoscPola = +pole.textContent;
+        for(let j = wartoscPola; j < 10; j++){
+            document.getElementById(i).dispatchEvent(evt);   
+        }              
+    }
+}
+
+function zmianaKoloru(index) {
+    // document.getElementById(index).style.backgroundColor = "rgb(0, 255, 0)";
+}
