@@ -78,7 +78,7 @@ function start(){
     document.getElementById("start").onclick = null;
     let pole;
     const evt = new MouseEvent("click");
-    let wpisane = 1;
+    // let wpisane = 1;
 
     for(let i = 1; i < 82;i++){
         pole = document.getElementById(i);
@@ -91,10 +91,12 @@ function start(){
     for(let i = 1; i < 82;i++){
         let rand_pole = Math.floor((Math.random() * 80) + 1);
         if(i%rand_pole == 0){
-            for(let j = 0; j <= wpisane; j++)
+            for(let j = 1; j <= i; j++){
                 document.getElementById(i).dispatchEvent(evt);  
+            }
+            document.getElementById(i).onclick = null;
         } 
-        wpisane++;
+        
     }      
     
 }
