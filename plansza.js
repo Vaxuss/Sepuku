@@ -3,8 +3,6 @@ function tworzeniePlanszy() {
     let b = 101;
     let c = 1;
 
-
-
     for(let i = 0; i < 9 ; i++)
     {
         for(let l = 0; l < 9; l++)
@@ -75,21 +73,37 @@ function zwiekszanieIndexu(index){
     
 }
 
-//czyszczenie planszy/start gry
+//start gry
 function start(){
-    let diff;
+    document.getElementById("start").onclick = null;
     let pole;
     const evt = new MouseEvent("click");
+    let wpisane = 1;
 
     for(let i = 1; i < 82;i++){
         pole = document.getElementById(i);
         let wartoscPola = +pole.textContent;
         for(let j = wartoscPola; j < 10; j++){
-            document.getElementById(i).dispatchEvent(evt);   
+            pole.dispatchEvent(evt);  
         }              
     }
+
+    for(let i = 1; i < 82;i++){
+        let rand_pole = Math.floor((Math.random() * 80) + 1);
+        if(i%rand_pole == 0){
+            for(let j = 0; j <= wpisane; j++)
+                document.getElementById(i).dispatchEvent(evt);  
+        } 
+        wpisane++;
+    }      
+    
 }
 
 function zmianaKoloru(index) {
     // document.getElementById(index).style.backgroundColor = "rgb(0, 255, 0)";
+}
+
+//reset planszy
+function restart(){
+    location.reload();
 }
