@@ -87,19 +87,47 @@ function start(){
             pole.dispatchEvent(evt);  
         }              
     }
+    
+    //
+    let plansza = new Array();
+    let temp = 1;
+    for(let i = 1; i < 82; i++){
+        plansza[i] = Math.floor((Math.random() * 8) + 1);
+    }
 
-    for(let i = 1; i < 82;i++){
-        let rand_pole = Math.floor((Math.random() * 80) + 1);
-        if(i%rand_pole == 0){
-            for(let j = 1; j <= i; j++){
+
+    //losowe liczby bez powtorzen na planszy
+    for(let i = 1; i < 82; i++){
+        for(let j = 1; j < 10; j++){
+            if(plansza[i] == plansza[i+(9*j)]){
+                plansza[i+(9*j)] == 0;
+            }else continue;
+        }
+        for(let j = 1; j < 10; j++){
+            if(i>j){
+                if(plansza[i] == plansza[i - j]){
+                    plansza[i - j] = 0;
+                }
+            }
+            else if(j*temp > i){
+                if(plansza[i] == plansza[i + j]){
+                    plansza[i - j] = 0;
+                }
+            }
+        }
+        temp++;
+    }
+
+    for(let i = 1; i < 82; i++){
+        if(plansza[i] != 0){
+            for(let j = 1; j <= plansza[i]; j++){
                 document.getElementById(i).dispatchEvent(evt);  
             }
             document.getElementById(i).onclick = null;
-        } 
-        
-    }      
+        }
+    } 
+}      
     
-}
 
 function zmianaKoloru(index) {
     // document.getElementById(index).style.backgroundColor = "rgb(0, 255, 0)";
