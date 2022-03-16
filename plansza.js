@@ -90,32 +90,38 @@ function start(){
     
     //
     let plansza = new Array();
-    let temp = 1;
     for(let i = 1; i < 82; i++){
         plansza[i] = Math.floor((Math.random() * 8) + 1);
     }
 
 
-    //losowe liczby bez powtorzen na planszy
+    //losowe liczby bez powtorzen na planszy//nie dziala nie umiem matmy
     for(let i = 1; i < 82; i++){
         for(let j = 1; j < 10; j++){
             if(plansza[i] == plansza[i+(9*j)]){
-                plansza[i+(9*j)] == 0;
+                plansza[i+(9*j)] = 0;
             }else continue;
         }
-        for(let j = 1; j < 10; j++){
-            if(i<2){//nie wiem co tu zrobic
+        
+        if(i%9 != 0){
+            let modulo = i%9;
+            for(let j = 1; j < modulo; j++){
+                if(plansza[i] == plansza[i + j]){
+                    plansza[i + j] = 0;
+                }
+            }
+            for(let j = modulo; j > 0; j--){
                 if(plansza[i] == plansza[i - j]){
                     plansza[i - j] = 0;
                 }
             }
-            else if(j*temp > i){
-                if(plansza[i] == plansza[i + j]){
+        }else{
+            for(let j = 1; j < 9; j++){
+                if(plansza[i] == plansza[i - j]){
                     plansza[i - j] = 0;
                 }
             }
-        }
-        temp++;
+        }        
     }
 
     for(let i = 1; i < 82; i++){
