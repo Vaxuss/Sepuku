@@ -104,7 +104,7 @@ function start(){
             }else continue;
         }
         for(let j = 1; j < 10; j++){
-            if(i>j){
+            if(i<2){//nie wiem co tu zrobic
                 if(plansza[i] == plansza[i - j]){
                     plansza[i - j] = 0;
                 }
