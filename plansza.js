@@ -126,21 +126,19 @@ function start(){
         }
         //zabijcie mnie//pomysł na wzór???
         if(i>9){
-            if(plansza[i] == plansza [i-7])  plansza[i-7] = 0;
-            if(plansza[i] == plansza [i+7])  plansza[i+7] = 0;
-            if(plansza[i] == plansza [i+8])  plansza[i+8] = 0;
-            if(plansza[i] == plansza [i-8])  plansza[i-8] = 0;
-            if(plansza[i] == plansza [i+10])  plansza[i+10] = 0;
-            if(plansza[i] == plansza [i-10])  plansza[i-10] = 0;
-            if(plansza[i] == plansza [i-11])  plansza[i-11] = 0;
-            if(plansza[i] == plansza [i+11])  plansza[i+11] = 0;
+            for(let j = 7; j <= 11; j++){
+                if(plansza[i] == plansza [i-j])  plansza[i-j] = 0;//ujemna i dodatnia wersja jest po to by sprawdzić miejsca które nie sięga sprwadzanie w poziomie i pionie; 
+                if(plansza[i] == plansza [i+j])  plansza[i+j] = 0;
+            }
+            if(plansza[i] == plansza [i+20])  plansza[i+20] = 0;
+            if(plansza[i] == plansza [i+16])  plansza[i+16] = 0;
         }
 
         if(i>18){
-            if(plansza[i] == plansza [i+17])  plansza[i+17] = 0;
-            if(plansza[i] == plansza [i-17])  plansza[i-17] = 0;
-            if(plansza[i] == plansza [i+19])  plansza[i+19] = 0;
-            if(plansza[i] == plansza [i-19])  plansza[i-19] = 0;
+            for(let j = 16; j <=20; j++){
+                if(plansza[i] == plansza [i-j])  plansza[i-j] = 0;
+                if(plansza[i] == plansza [i+j])  plansza[i+j] = 0;
+            }
         }
     }
 
