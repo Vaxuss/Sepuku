@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Sudoku - menu</title>
     <link rel="stylesheet" href="stylmenu.css">
+    <script src="plansza.js"></script>
 </head>
 <body>
     <div class = "kontener">
@@ -12,7 +13,12 @@
         </div>
         <br>
         <div class = "przyciski">
-            <a href = "index.html"><button id="graj">Graj!!!</button></a>
+            <button id="graj" onclick="PrzejdzDoIndex()">Graj!!!</button>
+            <select name="" id="poziomtrudnosci">
+                <option value="Łatwy">Łatwy</option>
+                <option value="Średni">Średni</option>
+                <option value="Trudny">Trudny</option>
+            </select>
         </div>
     </div>
 </body>

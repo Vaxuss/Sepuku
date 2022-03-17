@@ -1,0 +1,8 @@
+-> start()
+let poziomtrudnosci = new URLSearchParams(window.location.search).get("poziomtrudnosci");
+console.log(poziomtrudnosci);
+
+function PrzejdzDoIndex() {
+    poziomtrudnosci = document.getElementById("poziomtrudnosci").value;
+    window.location = "index.html?poziomtrudnosci="+poziomtrudnosci;
+}

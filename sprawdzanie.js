@@ -79,11 +79,29 @@ function sprawdzaniePol(){
     }
 
     //Sprawdzanie w kwadracie
-    for(let i = 0 ; i < 10; i++)
+    a = 0;
+    numerliczby = 0;
+    for (h = 0; h<3; h++)
     {
-        liczby[i] = 0;
+        for (i = 0; i<3; i++)
+        {
+            for(let i = 0 ; i < 10; i++)    liczby[i] = 0;
+            for(j = 0; j<3; j++)
+            {
+                for(k = 0; k<3; k++)
+                {
+                    liczby[numerliczby] = wyniki[a];
+                    a++;
+                    console.log("siemano" + liczby[numerliczby]);
+                    numerliczby++;
+                }
+                a=a+6; //na nową linię
+            }
+            numerliczby = 0;
+            a = a - 24;
+        }
+        a = a + 18;
     }
-
     /*for(k = 0; k < b ; k++)
     {
         if(liczby[wyniki[k]] == 0)
@@ -130,58 +148,58 @@ function sprawdzaniePol(){
     }*/
 
 
-    for(let i = 0 ; i < 9; i++)
-    {
-        k = 3*i;
-        b = k + 2;
-        for(k +=0; k < b ; k++)
-        {
-            if(liczby[wyniki[k]] == 0)
-            {
-                liczby[wyniki[k]]++;
-                console.log("Bez powtorzen w kwadracie");
-            }
-            else
-            {
-                //alert("Liczby są powtórzone kwadracie");
-                console.log("Powtorzenie kwadracie");
-                powtorzenie = true;
-                //break; 
-            }
-        }
-        b+=9;
-        for(k+=6; k < b ; k++)
-        {
-            if(liczby[wyniki[k]] == 0)
-            {
-                liczby[wyniki[k]]++;
-                console.log("Bez powtorzen w kwadracie");
-            }
-            else
-            {
-                //alert("Liczby są powtórzone kwadracie");
-                console.log("Powtorzenie kwadracie");
-                powtorzenie = true;
-                //break; 
-            }
-        }
-        b+=9;
-        for(k+=6; k < b ; k++)
-        {
-            if(liczby[wyniki[k]] == 0)
-            {   
-                liczby[wyniki[k]]++;
-                console.log("Bez powtorzen w kwadracie");
-            }
-            else
-            {
-                //alert("Liczby są powtórzone w kwadracie");
-                console.log("Powtorzenie kwadracie");
-                powtorzenie = true;
-                //break; 
-            }
-        }
-    }
+    // for(let i = 0 ; i < 9; i++)
+    // {
+    //     k = 3*i;
+    //     b = k + 2;
+    //     for(k +=0; k < b ; k++)
+    //     {
+    //         if(liczby[wyniki[k]] == 0)
+    //         {
+    //             liczby[wyniki[k]]++;
+    //             console.log("Bez powtorzen w kwadracie");
+    //         }
+    //         else
+    //         {
+    //             //alert("Liczby są powtórzone kwadracie");
+    //             console.log("Powtorzenie kwadracie");
+    //             powtorzenie = true;
+    //             //break; 
+    //         }
+    //     }
+    //     b+=9;
+    //     for(k+=6; k < b ; k++)
+    //     {
+    //         if(liczby[wyniki[k]] == 0)
+    //         {
+    //             liczby[wyniki[k]]++;
+    //             console.log("Bez powtorzen w kwadracie");
+    //         }
+    //         else
+    //         {
+    //             //alert("Liczby są powtórzone kwadracie");
+    //             console.log("Powtorzenie kwadracie");
+    //             powtorzenie = true;
+    //             //break; 
+    //         }
+    //     }
+    //     b+=9;
+    //     for(k+=6; k < b ; k++)
+    //     {
+    //         if(liczby[wyniki[k]] == 0)
+    //         {   
+    //             liczby[wyniki[k]]++;
+    //             console.log("Bez powtorzen w kwadracie");
+    //         }
+    //         else
+    //         {
+    //             //alert("Liczby są powtórzone w kwadracie");
+    //             console.log("Powtorzenie kwadracie");
+    //             powtorzenie = true;
+    //             //break; 
+    //         }
+    //     }
+    // }
 
     if(powtorzenie)
     {
