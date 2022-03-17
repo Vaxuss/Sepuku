@@ -9,7 +9,7 @@ function tworzeniePlanszy() {
         {
             if(c < 10)
             {
-                document.getElementById("pole").innerHTML += "<div onmouseover = "+"zmianaKoloru("+a+")" + " onclick=" + "zwiekszanieIndexu("+b+")" + " class = "+"plansza" + " id= " + a + " ><a class = " + "liczby" + " id=" + b + " >" + c + "</a></div>";                 
+                document.getElementById("pole").innerHTML += "<div onmouseover = "+"zmianaKoloru("+a+")" + " onclick=" + "zwiekszanieIndexu("+b+")" + "oncontextmenu = " + "zmniejszanieIndexu("+b+")" + " class = "+"plansza" + " id= " + a + " ><a class = " + "liczby" + " id=" + b + " >" + c + "</a></div>";                 
                 a++;
                 b++;
                 c++;
@@ -73,6 +73,24 @@ function zwiekszanieIndexu(index){
     
 }
 
+function zmniejszanieIndexu(index){
+    let pole = document.getElementById(index);
+    let wartoscPola = +pole.textContent;
+    console.log(wartoscPola);
+
+    if(wartoscPola <= 0)
+    {
+        pole.innerHTML = 9;
+    }
+    else
+    {
+        pole.innerHTML = wartoscPola-1;
+    }
+
+    console.log("Zmniejszanie indexu");
+    
+}
+
 //start gry
 function start(){
     document.getElementById("start").onclick = null;
@@ -124,7 +142,6 @@ function start(){
                 }
             }
         }
-        //zabijcie mnie//pomysł na wzór???
         if(i>9){
             for(let j = 7; j <= 11; j++){
                 if(plansza[i] == plansza [i-j])  plansza[i-j] = 0;//ujemna i dodatnia wersja jest po to by sprawdzić miejsca które nie sięga sprwadzanie w poziomie i pionie; 
@@ -148,6 +165,7 @@ function start(){
                 document.getElementById(i).dispatchEvent(evt);  
             }
             document.getElementById(i).onclick = null;
+            document.getElementById(i).oncontextmenu = null;
         }
     } 
 }      
