@@ -9,7 +9,7 @@ function tworzeniePlanszy() {
         {
             if(c < 10)
             {
-                document.getElementById("pole").innerHTML += "<div onmouseover = "+"zmianaKoloru("+a+")" + " onclick=" + "zwiekszanieIndexu("+b+")" + "oncontextmenu = " + "zmniejszanieIndexu("+b+")" + " class = "+"plansza" + " id= " + a + " ><a class = " + "liczby" + " id=" + b + " >" + c + "</a></div>";                 
+                document.getElementById("pole").innerHTML += "<div onmouseover = "+"zmianaKoloru("+a+")" + " onclick=" + "zwiekszanieIndexu("+b+")" + " class = "+"plansza" + " id= " + a + " ><a class = " + "liczby" + " id=" + b + " >" + c + "</a></div>";                 
                 a++;
                 b++;
                 c++;
@@ -73,21 +73,21 @@ function zwiekszanieIndexu(index){
     
 }
 
-function zmniejszanieIndexu(index){
+function zwiekszanieIndexu(index){
     let pole = document.getElementById(index);
     let wartoscPola = +pole.textContent;
     console.log(wartoscPola);
 
-    if(wartoscPola <= 0)
+    if(wartoscPola >= 9)
     {
-        pole.innerHTML = 9;
+        pole.innerHTML = "";
     }
     else
     {
-        pole.innerHTML = wartoscPola-1;
+        pole.innerHTML = wartoscPola+1;
     }
 
-    console.log("Zmniejszanie indexu");
+    console.log("Zwiekszanie indexu");
     
 }
 
@@ -165,7 +165,6 @@ function start(){
                 document.getElementById(i).dispatchEvent(evt);  
             }
             document.getElementById(i).onclick = null;
-            document.getElementById(i).oncontextmenu = null;
         }
     } 
 }      
