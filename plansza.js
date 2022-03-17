@@ -78,7 +78,6 @@ function start(){
     document.getElementById("start").onclick = null;
     let pole;
     const evt = new MouseEvent("click");
-    // let wpisane = 1;
 
     for(let i = 1; i < 82;i++){
         pole = document.getElementById(i);
@@ -90,10 +89,13 @@ function start(){
     
     //
     let plansza = new Array();
+    let kwadrat = new Array();
     for(let i = 1; i < 82; i++){
         plansza[i] = Math.floor((Math.random() * 8) + 1);
     }
-
+    for(let i = 1; i < 10; i++){
+        kwadrat[i] = 0;
+    }
 
     //losowe liczby bez powtorzen na planszy//nie dziala nie umiem matmy
     for(let i = 1; i < 82; i++){
@@ -121,7 +123,25 @@ function start(){
                     plansza[i - j] = 0;
                 }
             }
-        }        
+        }
+        //zabijcie mnie//pomysł na wzór???
+        if(i>9){
+            if(plansza[i] == plansza [i-7])  plansza[i-7] = 0;
+            if(plansza[i] == plansza [i+7])  plansza[i+7] = 0;
+            if(plansza[i] == plansza [i+8])  plansza[i+8] = 0;
+            if(plansza[i] == plansza [i-8])  plansza[i-8] = 0;
+            if(plansza[i] == plansza [i+10])  plansza[i+10] = 0;
+            if(plansza[i] == plansza [i-10])  plansza[i-10] = 0;
+            if(plansza[i] == plansza [i-11])  plansza[i-11] = 0;
+            if(plansza[i] == plansza [i+11])  plansza[i+11] = 0;
+        }
+
+        if(i>18){
+            if(plansza[i] == plansza [i+17])  plansza[i+17] = 0;
+            if(plansza[i] == plansza [i-17])  plansza[i-17] = 0;
+            if(plansza[i] == plansza [i+19])  plansza[i+19] = 0;
+            if(plansza[i] == plansza [i-19])  plansza[i-19] = 0;
+        }
     }
 
     for(let i = 1; i < 82; i++){
