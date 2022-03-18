@@ -95,6 +95,7 @@ function zwiekszanieIndexu(index){
 function start(){
     document.getElementById("start").onclick = null;
     let pole;
+    let limit;
     const evt = new MouseEvent("click");
     //ustawienie poziomu trudności
     let poziomtrudnosci = new URLSearchParams(window.location.search).get("poziomtrudnosci");
@@ -111,7 +112,12 @@ function start(){
     let plansza = new Array();
     let kwadrat = new Array();
     for(let i = 1; i < 82; i++){
-        plansza[i] = Math.floor((Math.random() * 8) + 1);
+        if(i%3==0){
+            plansza[i] = Math.floor((Math.random() * 5) + 1);
+        }
+        else{
+            plansza[i] = Math.floor((Math.random() * 8) + 1);
+        }   
     }
     for(let i = 1; i < 10; i++){
         kwadrat[i] = 0;
@@ -163,9 +169,21 @@ function start(){
 
     for(let i = 1; i < 82; i++){
         if(plansza[i] != 0){
+            let rand =  Math.floor((Math.random() * 2)+1);
+            if(rand == 1){
+                limit++;
+                plansza[i] = 0;
+            }
+        }
+        if(limit == 9) i = 83;
+    }
+
+    for(let i = 1; i < 82; i++){
+        if(plansza[i] != 0){
             for(let j = 1; j <= plansza[i]; j++){
                 document.getElementById(i).dispatchEvent(evt);  
             }
+            document.getElementById(i).style.fontSize = "50px";
             document.getElementById(i).onclick = null;
         }
     } 
