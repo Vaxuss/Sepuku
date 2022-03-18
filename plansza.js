@@ -96,7 +96,9 @@ function start(){
     document.getElementById("start").onclick = null;
     let pole;
     const evt = new MouseEvent("click");
-
+    //ustawienie poziomu trudności
+    let poziomtrudnosci = new URLSearchParams(window.location.search).get("poziomtrudnosci");
+    console.log(poziomtrudnosci);
     for(let i = 1; i < 82;i++){
         pole = document.getElementById(i);
         let wartoscPola = +pole.textContent;
@@ -172,6 +174,11 @@ function start(){
 
 function zmianaKoloru(index) {
     // document.getElementById(index).style.backgroundColor = "rgb(0, 255, 0)";
+}
+//Przejście do indexa wraz z informacją o poziomie trudności
+function PrzejdzDoIndex() {
+    poziomtrudnosci = document.getElementById("poziomtrudnosci").value;
+    window.location = "index.html?poziomtrudnosci="+poziomtrudnosci;
 }
 
 //reset planszy
