@@ -3,13 +3,14 @@ function tworzeniePlanszy() {
     let b = 101;
     let c = 1;
 
+
     for(let i = 0; i < 9 ; i++)
     {
         for(let l = 0; l < 9; l++)
         {
             if(c < 10)
             {
-                document.getElementById("pole").innerHTML += "<div onmouseover = "+"zmianaKoloru("+a+")" + " onclick=" + "zwiekszanieIndexu("+b+")" + " class = "+"plansza" + " id= " + a + " ><a class = " + "liczby" + " id=" + b + " >" + c + "</a></div>";                 
+                document.getElementById("pole").innerHTML += "<div onmouseover = "+"zmianaKoloru("+a+")" + " onclick=" + "zwiekszanieIndexu("+b+")" + " oncontextmenu = "+"zmniejszenieInedxu("+b+")" + " class = "+"plansza" + " id= " + a + " ><a class = " + "liczby" + " id=" + b + " >" + c + "</a></div>";                 
                 a++;
                 b++;
                 c++;
@@ -17,7 +18,7 @@ function tworzeniePlanszy() {
             else
             {
                 c = 1;
-                document.getElementById("pole").innerHTML += "<div onmouseover = "+"zmianaKoloru("+a+")" + " onclick=" + "zwiekszanieIndexu("+b+")" + " class = "+"plansza" + " id= " + a + " ><a class = " + "liczby" + " id=" + b + " >" + c + "</a></div>";                 
+                document.getElementById("pole").innerHTML += "<div onmouseover = "+"zmianaKoloru("+a+")" + " onclick=" + "zwiekszanieIndexu("+b+")" + " oncontextmenu = "+"zmniejszenieInedxu("+b+")" + " class = "+"plansza" + " id= " + a + " ><a class = " + "liczby" + " id=" + b + " >" + c + "</a></div>";                 
                 a++;
                 b++;
                 c++;
@@ -73,24 +74,23 @@ function zwiekszanieIndexu(index){
     }
 
     console.log("Zwiekszanie indexu");
-    
 }
 
-function zwiekszanieIndexu(index){
+function zmniejszenieInedxu(index){
     let pole = document.getElementById(index);
     let wartoscPola = +pole.textContent;
     console.log(wartoscPola);
 
-    if(wartoscPola >= 9)
+    if(wartoscPola <= 1)
     {
-        pole.innerHTML = "";
+        pole.innerHTML = 9;
     }
     else
     {
-        pole.innerHTML = wartoscPola+1;
+        pole.innerHTML = wartoscPola-1;
     }
 
-    console.log("Zwiekszanie indexu");
+    console.log("Zmniejszanie indexu");
     
 }
 
