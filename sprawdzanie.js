@@ -207,6 +207,7 @@ function sprawdzaniePol(){
     }
     else{
         alert('WYGRANKO!!!');
+        punkty();
     }
 
 }
