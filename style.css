@@ -1,6 +1,7 @@
 body{
     display: flex;
     font-size: 40px;
+    background-color: grey;
 }
 .kontener {
     width: 100%;
@@ -55,9 +56,9 @@ img {
 .liczby {
     margin: auto;
 }
-div:hover {
+/* div:hover {
     background-color: #fff;
-}
+} */
 
 div{
     border-style: solid;
@@ -66,13 +67,15 @@ div{
 }
 
 button{
-    font-size: 30px;
+    font-size: 40px;
     width: auto;
     height: auto;
     border-radius: 10px;
 }
 
 #buttons{
-    padding-right: 20px;
+    text-align: right;
+    padding-top: 100px;
+    padding-right: 40px;
     border-style: none;
 }
