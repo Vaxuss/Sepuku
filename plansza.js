@@ -24,6 +24,9 @@ function tworzeniePlanszy() {
             }
         }
     }  
+
+    //te 3 fory są odpowiedzialne za kolorowanie planszy
+
     for(let j = 1 ; j <= 9; j++){
         for(let i = 1; i <= 9; i++){
             document.getElementById(j).style.backgroundColor = "rgb(77, 33, 33)"; 
