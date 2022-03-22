@@ -1,3 +1,11 @@
+function punkty() 
+{
+    let p = +document.getElementById('punkty').textContent;
+    console.log(p);
+    p++;
+    document.getElementById('punkty').innerHTML = p;
+}
+
 function sprawdzaniePol(){
     let wyniki = [];
     let liczby = [];
