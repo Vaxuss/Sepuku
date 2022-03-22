@@ -101,7 +101,7 @@ function start(){
     let limit;
     const evt = new MouseEvent("click");
     //ustawienie poziomu trudności
-    let poziomtrudnosci = new URLSearchParams(window.location.search).get("poziomtrudnosci");
+    let poziomtrudnosci = new URLSearchParams(window.location.search).get("poziomtrudnosci");//nie, nie robimy tego.
     console.log(poziomtrudnosci);
     for(let i = 1; i < 82;i++){
         pole = document.getElementById(i);
