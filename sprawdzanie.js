@@ -85,7 +85,7 @@ function sprawdzaniePol(){
     {
         for (i = 0; i<3; i++)
         {
-            for(let i = 0 ; i < 10; i++)    liczby[i] = 0;
+            for(j = 0 ; j < 10; j++)    liczby[j] = 0;
             for(j = 0; j<3; j++)
             {
                 for(k = 0; k<3; k++)
@@ -97,6 +97,26 @@ function sprawdzaniePol(){
                 }
                 a=a+6; //na nową linię
             }
+            k = 1;
+            let wynik = 9;
+            while(k <= wynik)
+        {
+            for(let l = 0; l<10; l++)
+        {
+            if(liczby[l] == k)
+            {
+                k++;
+                l = 10;
+                console.log("Nowa liczba w kwadracie");
+            }
+            if(l==9)
+            {
+                console.log("Powtorzenie w kwadracie");
+                powtorzenie = true;
+                k++
+            }
+        }
+        }    
             numerliczby = 0;
             a = a - 24;
         }
@@ -207,6 +227,7 @@ function sprawdzaniePol(){
     }
     else{
         alert('WYGRANKO!!!');
+        punkty();
     }
 
 }
