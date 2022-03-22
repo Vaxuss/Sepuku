@@ -119,7 +119,7 @@ function start(){
             plansza[i] = Math.floor((Math.random() * 5) + 1);
         }
         else{
-            plansza[i] = Math.floor((Math.random() * 8) + 1);
+            plansza[i] = Math.floor((Math.random() * 9) + 1);
         }   
     }
     for(let i = 1; i < 10; i++){
